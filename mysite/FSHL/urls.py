@@ -1,3 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
-urlpatterns = []
+from FSHL.views import products
+
+app_name = 'FSHL'
+
+urlpatterns = [
+    path('', products, name='index')
+]
