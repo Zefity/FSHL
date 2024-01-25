@@ -3,7 +3,7 @@ from django.contrib import auth
 from django.urls import reverse
 
 from .models import User
-from .forms import UserLoginForm
+from .forms import UserLoginForm, UserRegistrationForm
 
 
 def login(request):
@@ -23,4 +23,7 @@ def login(request):
 
 
 def registration(request):
-    return render(request, 'users/registration.html')
+    form = UserRegistrationForm()
+
+    context = {'form': form}
+    return render(request, 'users/registration.html', context)
