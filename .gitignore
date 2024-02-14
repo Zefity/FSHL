@@ -7,7 +7,7 @@ idea
 *.egg
 
 dist
-db.sqlite3
+mysite/db.sqlite3
 
 venv
 
